@@ -10,6 +10,14 @@ pipeline {
 
    agent  any
     stages {
+            stage ( 'git clone') {
+
+                steps {
+
+                    sh "git clone https://github.com/KratiV123/Terraform-Jenkins.git"
+
+            }
+ }
         stage('checkout') {
             steps {
                  script{
