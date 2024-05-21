@@ -12,10 +12,11 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                 script{
-                        dir("terraform")
+                 
+                        dir("git")
                         {
-                            git "https://github.com/yeshwanthlm/Terraform-Jenkins.git"
+                            sh "git clone https://github.com/KratiV123/Terraform-Jenkins.git"
+                        
                         }
                     }
                 }
